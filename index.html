@@ -1,49 +1,294 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+  <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/custom.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section data-background-video-loop="true" data-background-size="contain" data-background-video-muted="true"
+             data-background-video="media/2.mp4" data-markdown>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+      <textarea data-template>### LED Dancefloor</textarea>
+    </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    <section data-markdown>
+          <textarea data-template>
+            #### LED Dancefloor
+
+            1. Introduction
+            2. Setup
+            3. Software
+            4. Results
+            5. Conclusion
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            ### 1. Introduction
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            #### [Arduino](https://store.arduino.cc/genuino-starter-kit)
+
+            Starter Kit: from 0 in electronic & programming
+            <!-- .element: class="fragment" -->
+
+            Plug&Play
+            <!-- .element: class="fragment" -->
+
+            → First project for Halloween 2016
+            <!-- .element: class="fragment" -->
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            #### Adafruit: open-source hardware company
+
+            [Neopixel](https://www.adafruit.com/category/168)<!-- .element: class="fragment" -->
+
+            → First LED project for January 2017 with 100 LEDs
+            <!-- .element: class="fragment" -->
+
+            [Cheaper elsewhere...](https://fr.aliexpress.com/item/DC5V-1m-4m-5m-WS2812B-Smart-led-pixel-strip-Black-White-PCB-30-60-144-leds/32337440906.html?spm=2114.13010608.0.0.Ij5akp)
+            <!-- .element: class="fragment" -->
+
+            But<!-- .element: class="fragment" -->
+
+            → only made for Arduino<!-- .element: class="fragment"  -->
+
+            → performance issue with too many LEDs<!-- .element: class="fragment"-->
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            #### Raspberry Pi
+
+            Can run WS281X via GPIO with [rpi_ws281x](https://github.com/jgarff/rpi_ws281x) (library for python and C)
+
+            <!-- .element: class="fragment"-->
+
+            Also needs an hardware hack !
+
+            <!-- .element: class="fragment"-->
+
+            [node-rpi-ws281x-native](https://github.com/beyondscreen/node-rpi-ws281x-native) for NodeJs
+
+            <!-- .element: class="fragment"-->
+
+            → Typescript + Frontend <!-- .element: class="fragment" -->
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            ### 2. Development
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            #### First Step: Frontend Preview
+
+            No hardware yet (~ 3 months delivery)
+
+            <!-- .element: class="fragment" -->
+
+            → Start with Html/Js preview with [PixiJs](http://www.pixijs.com/)
+
+            <!-- .element: class="fragment" -->
+
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            #### Step 2: Basteln !
+
+          </textarea>
+    </section>
+
+    <section>
+      <img data-src="media/build1.jpg" width="50%"/>
+    </section>
+
+    <section>
+      <img data-src="media/cable1.jpg" width="50%%"/>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            Don't need frontend anymore
+
+            <!-- .element: class="fragment" -->
+
+            Can only test on Pi
+
+            <!-- .element: class="fragment" -->
+
+            → git push / git pull
+
+            <!-- .element: class="fragment" -->
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            #### Step 3: Animation selector frontend
+
+            Simple React form + NodeJs (Express) backend
+
+            <!-- .element: class="fragment" -->
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            ### 3. Results
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            ### 4. Conclusion
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            Arduino
+            <!-- .element: class="fragment" -->
+
+            👍👍👍 Cheap, easy, plug&play, 0 knowledge needed, physics + programming, big community
+            <!-- .element: class="fragment" -->
+
+            👎Low spec (memory & proc), programming with C
+
+            <!-- .element: class="fragment" -->
+
+            👍👍👍  Neopixel: easy to use, just works !
+            <!-- .element: class="fragment" -->
+
+            Hardware is fun !
+
+            <!-- .element: class="fragment" -->
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+            👍👍👍 Typescript
+            <!-- .element: class="fragment" -->
+
+            👎👎 nodeJs
+            <!-- .element: class="fragment" -->
+
+            👍👍 Express: easy basic webservice
+            <!-- .element: class="fragment" -->
+
+            👎👎 Pixijs
+            <!-- .element: class="fragment" -->
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+          <textarea data-template>
+
+           ### What's next ?
+
+            More party !
+            <!-- .element: class="fragment" -->
+
+            More animations
+            <!-- .element: class="fragment" -->
+
+            More effects (disco ball ?)
+            <!-- .element: class="fragment" -->
+
+          </textarea>
+    </section>
+
+    <section data-markdown>
+      <textarea data-template>
+
+        [Github](https://github.com/piettes/visual_manager)
+
+      </textarea>
+    </section>
+
+
+  </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    dependencies: [
+      {src: 'plugin/markdown/marked.js'},
+      {src: 'plugin/markdown/markdown.js'},
+      {src: 'plugin/notes/notes.js', async: true},
+      {src: 'plugin/zoom-js/zoom.js', async: true},
+      {
+        src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+        hljs.initHighlightingOnLoad();
+      }
+      }
+    ]
+  });
+  Reveal.configure({slideNumber: true});
+  Reveal.configure({slideNumber: 'c/t'});
+</script>
+</body>
 </html>
